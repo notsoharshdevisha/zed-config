@@ -1,0 +1,66 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space t": "workspace::ToggleBottomDock",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "d d": "tab_switcher::CloseSelectedItem",
+      "k": "tab_switcher::Toggle",
+      "j": "tab_switcher::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "space c": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      // "down": ["workspace::SendKeystrokes", "4 j"]
+      // "up": ["workspace::SendKeystrokes", "4 k"]
+      "shift-k": "editor::Hover",
+      "space a": "editor::ToggleCodeActions",
+      "space r": "editor::Rename",
+      "space d": "diagnostics::Deploy",
+      "space h": [
+        "workspace::ActivatePaneInDirection",
+        "Left"
+      ],
+      "space l": [
+        "workspace::ActivatePaneInDirection",
+        "Right"
+      ],
+      "space f": "file_finder::Toggle",
+      "space b": "tab_switcher::Toggle",
+      "space p": "project_search::ToggleFocus",
+      "space e": "workspace::ToggleLeftDock",
+      "space t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      // e.g.
+      "j k": "vim::NormalBefore" // remap jj in insert mode to escape.
+    }
+  }
+]
